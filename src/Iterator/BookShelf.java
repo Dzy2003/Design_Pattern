@@ -1,20 +1,23 @@
 package Iterator;
 
+import java.util.ArrayList;
+
 /**
  * @author 白日
  * @date Created in 2023/10/15 21:52
  */
 
 public class BookShelf implements Aggregate<Book>{
-    Book[] books;
+    ArrayList<Book> books;
     int last = 0;
 
     public BookShelf(int shelfSize){
-        books = new Book[shelfSize];
+        books = new ArrayList(shelfSize);
     }
 
     public void appendBook(Book book){
-        books[last++] = book;
+        books.add(book);
+        last++;
     }
 
     public int getLength(){
@@ -22,7 +25,7 @@ public class BookShelf implements Aggregate<Book>{
     }
 
     public Book getBookAt(int index) {
-        return books[index];
+        return books.get(index);
     }
 
     @Override
