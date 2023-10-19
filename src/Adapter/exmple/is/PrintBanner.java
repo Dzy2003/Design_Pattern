@@ -12,11 +12,11 @@ public class PrintBanner extends Banner implements Print{
     }
     @Override
     public void printWeak() {
-        showWithAster();
+        showWithParen();
     }
 
     @Override
     public void printStrong() {
-        showWithParen();
+        showWithAster();
     }
 }

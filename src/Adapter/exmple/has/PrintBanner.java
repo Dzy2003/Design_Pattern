@@ -14,11 +14,11 @@ public class PrintBanner implements Print{
 
     @Override
     public void printWeak() {
-        banner.showWithAster();
+        banner.showWithParen();
     }
 
     @Override
     public void printStrong() {
-        banner.showWithParen();
+        banner.showWithAster();
     }
 }

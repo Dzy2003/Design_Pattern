@@ -13,10 +13,10 @@ public class Banner {
     }
 
     public void showWithParen(){
-        System.out.println(new StringBuilder().append("(").append(s).append(")").toString());;
+        System.out.println(new StringBuilder().append("(").append(s).append(")"));
     }
 
     public void showWithAster(){
-        System.out.println(new StringBuilder().append("*").append(s).append("*").toString());;
+        System.out.println(new StringBuilder().append("*").append(s).append("*"));
     }
 }
