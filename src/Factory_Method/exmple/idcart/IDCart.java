@@ -8,19 +8,24 @@ import Factory_Method.exmple.framework.Product;
  */
 
 public class IDCart extends Product {
-    String owner;
+    private String owner;
+    private int serial;
 
-    IDCart(String owner){
+    IDCart(String owner,int serial){
         this.owner = owner;
-        System.out.println(owner + "的IDCart制作好了");
+        this.serial = serial;
+        System.out.println(owner + "的IDCart制作好了！编号为：" + serial);
     }
 
     @Override
     public void use() {
-        System.out.println(owner + "的IDCart被使用了");
+        System.out.println(owner + "的IDCart被使用了!编号为：" + serial);
     }
 
     public String getOwner() {
         return owner;
+    }
+    public int getSerial() {
+        return serial;
     }
 }

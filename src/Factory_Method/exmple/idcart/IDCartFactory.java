@@ -4,7 +4,9 @@ import Factory_Method.exmple.framework.Factory;
 import Factory_Method.exmple.framework.Product;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 白日
@@ -12,19 +14,20 @@ import java.util.List;
  */
 
 public class IDCartFactory extends Factory {
-    ArrayList<String> owners = new ArrayList<>();
+    private Map<String,Integer> database = new HashMap<>();
+    private int serial = 1;
     @Override
     public Product createProduct(String owner) {
-        return new IDCart(owner);
+        return new IDCart(owner,serial++);
     }
 
     @Override
     public void RegisterProduct(Product product) {
         IDCart idCart = (IDCart) product;
-        owners.add(idCart.getOwner());
+        database.put(idCart.getOwner(),idCart.getSerial());
     }
 
-    public List<String> getOwners() {
-        return owners;
+    public Map getOwners() {
+        return database;
     }
 }
