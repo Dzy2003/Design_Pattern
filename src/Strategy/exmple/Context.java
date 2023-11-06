@@ -6,8 +6,8 @@ package Strategy.exmple;
  */
 
 public class Context {
-
     OperationStrategy strategy;
+
     public Context(OperationStrategy strategy){
         this.strategy = strategy;
     }
@@ -15,5 +15,4 @@ public class Context {
     public int executeStrategy(int a, int b) {
         return strategy.doOperation(a, b);
     }
-
 }
